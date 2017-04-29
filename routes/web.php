@@ -17,3 +17,8 @@ Route::get('/', function () {
 
 Route::post('/signup', 'UserController@signup');
 
+Route::get('/dashboard',[
+    'uses' => 'UserController@dashboard',
+    'as' => 'dashboard'
+]);
+

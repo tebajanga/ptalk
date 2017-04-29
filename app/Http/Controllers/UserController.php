@@ -20,10 +20,14 @@ class UserController extends Controller
 
         $user->save();
 
-        return back();
+        return redirect()->route('dashboard');
     }
 
     public function signin(Request $request){
 
+    }
+
+    public function dashboard(){
+        return view('dashboard');
     }
 }
