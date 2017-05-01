@@ -15,7 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/signup', 'UserController@signup');
+Route::post('/signup', [
+    'uses' => 'UserController@signup',
+    'as' => 'signup'
+]);
+
+Route::post('/signin', [
+    'uses' => 'UserController@signin',
+    'as' => 'signin'
+]);
 
 Route::get('/dashboard',[
     'uses' => 'UserController@dashboard',
