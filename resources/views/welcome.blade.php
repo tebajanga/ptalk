@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    People Talk
+    People Talk - Welcome
 @stop
 
 @section('content')
