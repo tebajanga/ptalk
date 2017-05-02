@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Post;
 
 class UserController extends Controller
 {
@@ -45,6 +46,7 @@ class UserController extends Controller
     }
 
     public function dashboard(){
-        return view('dashboard');
+        $posts = Post::all();
+        return view('dashboard',compact('posts'));
     }
 }
